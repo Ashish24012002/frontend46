@@ -27,10 +27,25 @@
                 //create local variable result
                 let result = this.number1 + this.number2;
                 return result;
+            },
+             getSubtraction: function () {
+                let result = this.number1 - this.number2;
+                return result;
+            },
+
+            getMultiplication: function () {
+                let result = this.number1 * this.number2;
+                return result;
+            },
+
+            getDivision: function () {
+                let result = this.number1 / this.number2;
+                return result;
             }
+            
             //exercise create getSubtraction, getMultiplication, getDivision function
 
-        }
+        };
         //call MyMath object's function display
         //objectname.functionname()
         MyMath.display();
@@ -38,6 +53,18 @@
         var result = MyMath.getAddition();
         console.log("addition ",result);
         console.log("number 1 " + MyMath.number1 + " number 2 " + MyMath.number2);
+        
+        result = MyMath.getSubtraction();
+        console.log("Subtraction:", result);
+        console.log("number1:", MyMath.number1, "number2:", MyMath.number2);
+
+        result = MyMath.getMultiplication();
+        console.log("Multiplication:", result);
+        console.log("number1:", MyMath.number1, "number2:", MyMath.number2);
+
+        result = MyMath.getDivision();
+        console.log("Division:", result);
+        console.log("number1:", MyMath.number1, "number2:", MyMath.number2);
     </script>
 </body>
 

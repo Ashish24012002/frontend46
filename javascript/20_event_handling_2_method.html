@@ -75,6 +75,7 @@
             buttons[position].onclick = function()
             {
                 this.value = letter;
+                 checkWin();
                 if (letter === 'X')
                     letter = '0';
                 else
@@ -83,6 +84,29 @@
                 //event disable
                 this.onclick = null;
 
+            }
+        }
+        function checkWin() {
+            var a = document.getElementById("one").value;
+            var b = document.getElementById("two").value;
+            var c = document.getElementById("three").value;
+            var d = document.getElementById("four").value;
+            var e = document.getElementById("five").value;
+            var f = document.getElementById("six").value;
+            var g = document.getElementById("seven").value;
+            var h = document.getElementById("eight").value;
+            var i = document.getElementById("nine").value;
+
+            // 8 win combinations
+            if ((a == b && b == c && a != "-") ||
+                (d == e && e == f && d != "-") ||
+                (g == h && h == i && g != "-") ||
+                (a == d && d == g && a != "-") ||
+                (b == e && e == h && b != "-") ||
+                (c == f && f == i && c != "-") ||
+                (a == e && e == i && a != "-") ||
+                (c == e && e == g && c != "-")) {
+                alert("Player " + letter + " wins!");
             }
         }
     </script>

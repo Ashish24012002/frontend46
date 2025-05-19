@@ -20,19 +20,19 @@
         </tr>
         <tr>
             <td>Addition</td>
-            <td></td>
+            <td id = add></td>
         </tr>
         <tr>
             <td>Subtraction</td>
-            <td></td>
+            <td id = sub ></td>
         </tr>
         <tr>
             <td>Multiplication</td>
-            <td></td>
+            <td id = mul ></td>
         </tr>
         <tr>
             <td>Division</td>
-            <td></td>
+            <td id = div ></td>
         </tr>
     </table>
     <script>
@@ -51,8 +51,13 @@
             {
                 document.getElementById('num1').innerHTML = this.number1;
                 document.getElementById('num2').innerHTML = this.number2;
+                document.getElementById('add').innerHTML = this.number1 + this.number2;
+                document.getElementById('sub').innerHTML = this.number1 - this.number2;
+                document.getElementById('mul').innerHTML = this.number1 * this.number2;
+                document.getElementById('div').innerHTML = this.number1 / this.number2;
             }
-            // addition:function()
+            
+              
         });
 
         //create object variable
